@@ -1,2 +1,1 @@
 language: JAVA
-mvn install -DskipTests=True
