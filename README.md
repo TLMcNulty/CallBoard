@@ -10,7 +10,7 @@ where a Java App picks them up and formats them before inserting them into a MyS
 
 The database is then read by PHP and inserted into a generated HTML doc through JavaScript. 
 
-The page automatically refreshes when new information is detected. Upon this detection the call details are forwarded to an AWS SNS topic that sends text messages.
+The page automatically refreshes when new information is detected. Upon this detection the call details are forwarded to an AWS SNS topic that sends text messages. The screen is kept off when not in use. When a page is recieved the system powers a relay that automatically boots the display, shutting it off 15 minutes later. 
 
 ![An early version](https://github.com/pete800/CallBoard/blob/master/Pictures/Pri1%20Edited.PNG)
 The earliest version of the display. 
