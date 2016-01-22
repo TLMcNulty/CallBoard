@@ -1,4 +1,4 @@
-![Callboard+](https://github.com/pete800/CallBoard/blob/master/Pictures/logo.PNG)
+![Callboard+](https://github.com/pete800/CallBoard/blob/master/Pictures/logo.png)
 =========
 
 An automatic and autonomous 911 page display and notification. 
