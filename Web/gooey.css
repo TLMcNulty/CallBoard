@@ -1,0 +1,170 @@
+/* line 13, ../sass/gooey.scss */
+body {
+  background: #404040;
+  color: white;
+}
+
+/* line 17, ../sass/gooey.scss */
+a {
+  color: inherit;
+}
+
+/* line 20, ../sass/gooey.scss */
+h1, h2, h3, h4 {
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* line 25, ../sass/gooey.scss */
+h1 {
+  font-size: 3em;
+}
+
+/* line 29, ../sass/gooey.scss */
+.menu {
+  filter: url("#shadowed-goo");
+}
+
+/* line 35, ../sass/gooey.scss */
+.menu-item, .menu-open-button {
+  background: #666666;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  position: absolute;
+  top: 20px;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  transform: translate3d(0, 0, 0);
+  transition: transform ease-out 200ms;
+}
+
+/* line 49, ../sass/gooey.scss */
+.menu-open {
+  display: none;
+}
+
+/* line 55, ../sass/gooey.scss */
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: -1.5px;
+  transition: transform 200ms;
+}
+
+/* line 70, ../sass/gooey.scss */
+.hamburger-1 {
+  transform: translate3d(0, -8px, 0);
+}
+
+/* line 73, ../sass/gooey.scss */
+.hamburger-2 {
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 76, ../sass/gooey.scss */
+.hamburger-3 {
+  transform: translate3d(0, 8px, 0);
+}
+
+/* line 80, ../sass/gooey.scss */
+.menu-open:checked + .menu-open-button .hamburger-1 {
+  transform: translate3d(0, 0, 0) rotate(45deg);
+}
+/* line 83, ../sass/gooey.scss */
+.menu-open:checked + .menu-open-button .hamburger-2 {
+  transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+/* line 86, ../sass/gooey.scss */
+.menu-open:checked + .menu-open-button .hamburger-3 {
+  transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+/* line 90, ../sass/gooey.scss */
+.menu {
+  position: absolute;
+  left: 95%;
+  margin-left: -80px;
+  padding-top: 20px;
+  padding-left: 80px;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: left;
+}
+
+/* line 108, ../sass/gooey.scss */
+.menu-item:hover {
+  background: white;
+  color: #666666;
+}
+/* line 113, ../sass/gooey.scss */
+.menu-item:nth-child(3) {
+  transition-duration: 180ms;
+}
+/* line 113, ../sass/gooey.scss */
+.menu-item:nth-child(4) {
+  transition-duration: 180ms;
+}
+/* line 113, ../sass/gooey.scss */
+.menu-item:nth-child(5) {
+  transition-duration: 180ms;
+}
+/* line 113, ../sass/gooey.scss */
+.menu-item:nth-child(6) {
+  transition-duration: 180ms;
+}
+
+/* line 119, ../sass/gooey.scss */
+.menu-open-button {
+  z-index: 2;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 400ms;
+  transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+
+/* line 127, ../sass/gooey.scss */
+.menu-open-button:hover {
+  transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+/* line 130, ../sass/gooey.scss */
+.menu-open:checked + .menu-open-button {
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+/* line 136, ../sass/gooey.scss */
+.menu-open:checked ~ .menu-item {
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* line 140, ../sass/gooey.scss */
+.menu-open:checked ~ .menu-item:nth-child(3) {
+  transition-duration: 190ms;
+  transform: translate3d(-110px, 0, 0);
+}
+/* line 140, ../sass/gooey.scss */
+.menu-open:checked ~ .menu-item:nth-child(4) {
+  transition-duration: 290ms;
+  transform: translate3d(-220px, 0, 0);
+}
+/* line 140, ../sass/gooey.scss */
+.menu-open:checked ~ .menu-item:nth-child(5) {
+  transition-duration: 390ms;
+  transform: translate3d(-330px, 0, 0);
+}
+/* line 140, ../sass/gooey.scss */
+.menu-open:checked ~ .menu-item:nth-child(6) {
+  transition-duration: 490ms;
+  transform: translate3d(-440px, 0, 0);
+}

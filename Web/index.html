@@ -1,0 +1,156 @@
+<html><head>
+	<meta charset="utf-8"> 
+	<title>CallBoard+</title>
+	<link rel="stylesheet" href="public/night.css">
+	<link rel="stylesheet" href="public/blink.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900,700italic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="gooey.css">
+	<link rel="icon" type="image/png" href="favicon.ico">
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<script>
+	function startTime()
+	{
+    		var today=new Date();
+    		var h=today.getHours();
+    		var m=today.getMinutes();
+    		var s=today.getSeconds();
+    		m = checkTime(m);
+    		s = checkTime(s);
+    		document.getElementById("ctime").innerHTML = h+":"+m+":"+s;
+    		var t = setTimeout(function(){startTime()},500);
+	}
+
+	function checkTime(i)
+	{
+    		if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    		return i;
+	}
+	</script>
+
+	<script>
+	function startAPI()
+	{
+	   	var currentData = {};
+	   	var getData = function()
+		{
+		     	$.ajax({
+		        url: 'api.php',
+		        type: 'GET',
+			dataType: 'json',
+		        success: function(data)
+			{
+			           	if(data.callnum !== currentData.callnum)
+					{	
+		              			// This is a new record so we update currentData
+		              			currentData = data;
+						$('#rtime').html(data.rtime);
+						$('#priority').html(data.priority);
+						$('#emd').html(data.emd);
+						$('#loc').html(data.loc);
+						$('#desc').html(data.desc);
+						
+						if(data.priority === "1P")
+						{
+							$("#priority").css({"backgroundColor":"#FF0000","color":"white"});
+							$("#rtime").css({"backgroundColor":"#FF0000","color":"white"});
+							<!--$("#priority").addClass("blink_me");-->
+ 						}
+						else if(data.priority === "1")
+						{
+							$("#priority").removeClass();
+							$("#priority").css({"backgroundColor":"#FF0000","color":"white"});
+							$("#rtime").css({"backgroundColor":"#FF0000","color":"white"});
+							
+ 						}
+						else if(data.priority === "2")
+						{
+							$("#priority").removeClass();
+							$("#priority").css({"backgroundColor":"orange","color":"white"});
+							$("#rtime").css({"backgroundColor":"orange","color":"white"});
+ 						}
+						else if(data.priority === "3")
+						{
+							$("#priority").removeClass();
+							$("#priority").css({"backgroundColor":"#28A800","color":"white"});
+							$("#rtime").css({"backgroundColor":"#28A800","color":"white"});
+ 						}
+						else if(data.priority === "4")
+						{
+							$("#priority").removeClass();
+							$("#priority").css({"backgroundColor":"#0F4FA8","color":"white"});
+							$("#rtime").css({"backgroundColor":"#0F4FA8","color":"white"});
+ 						}
+					}
+	        	}
+	     	});  
+	};
+
+     	// Call getData on page load:
+     	getData();
+
+     	// Set up an interval to call it every 1 sec:
+     	setInterval(getData, 5000);
+  	};
+	</script>	
+</head>
+<body onload="startTime(); startAPI()">
+	<div id="wrapper">
+		<div id="loc">50 GREENLEAF CT ,HEN -- B50A PETERSON HL RI - ROOM 2118 </div>
+		<div id="desc"> RECEIVED INSTANT MESSAGE FEMALE HAVING DIFF BRTHNG   FEMALE HAVING TRBL BRTHNG     23-year-old, Female, Conscious, Breathing. </div>
+		
+		
+	<div id="topwrap">
+		<div id="callwrap">
+			<div id="priority" style="color: white; background-color: rgb(255, 0, 0);">1</div>
+			<div id="ctime">21:58:24</div>
+			<div id="rtime" style="color: white; background-color: rgb(255, 0, 0);">23:58:02</div>
+		</div>
+
+	<div id="emd">6D4</div>
+	</div>
+	<!--
+	<img id="logo" style="height:5em; float:right; position:fixed; right:2em; bottom:2em;" src="public/logo.png" />
+	-->
+
+	<nav class="menu">
+  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+  <label class="menu-open-button" for="menu-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
+  
+  <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+  
+  
+</nav>
+
+
+<!-- filters -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="shadowed-goo">
+          
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feComposite in2="shadow" in="goo" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+      <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+    </defs>
+</svg>
+
+</div>	
+</body></html>
