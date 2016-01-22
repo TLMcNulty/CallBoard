@@ -12,4 +12,9 @@ The database is then read by PHP and inserted into a generated HTML doc through 
 
 The page automatically refreshes when new information is detected. Upon this detection the call details are forwarded to an AWS SNS topic that sends text messages.
 
-![Priority 2](https://github.com/TLMcNulty/CallBoard/raw/master/Pictures/Done%202.png)
+![An early version](https://github.com/pete800/CallBoard/blob/master/Pictures/Pri1%20Edited.PNG)
+The earliest version of the display. 
+![A later revision](https://github.com/pete800/CallBoard/blob/master/Pictures/pri_4_bottom.png)
+A later revision
+![The current skin](https://github.com/pete800/CallBoard/blob/master/Pictures/Current%20View.png)
+The current layout. The colors are subdued for low light situations. The colored time is the time the call was recieved. 
