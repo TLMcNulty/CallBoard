@@ -1,4 +1,4 @@
-CallBoard
+![Callboard+](https://github.com/pete800/CallBoard/blob/master/Pictures/logo.PNG)
 =========
 
 An automatic and autonomous 911 page display and notification. 
@@ -22,4 +22,5 @@ A later revision
 The current layout. The colors are subdued for low light situations. The colored time is the time the call was recieved. 
 
 ![Pager output](https://github.com/pete800/CallBoard/blob/master/Pictures/Capture.PNG)
+
 This is the output the pager gives us. 
