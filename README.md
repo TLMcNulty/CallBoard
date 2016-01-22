@@ -1,7 +1,7 @@
 CallBoard
 =========
 
-An automatic and autonomous 911 page display.
+An automatic and autonomous 911 page display and notification. 
 
 ![GOGOGO](https://github.com/pete800/CallBoard/blob/master/Pictures/Current%20View.png)
 
@@ -10,7 +10,6 @@ where a Java App picks them up and formats them before inserting them into a MyS
 
 The database is then read by PHP and inserted into a generated HTML doc through JavaScript. 
 
-Version .1 uses an HTML Meta http refresh command to update the clock and database queries. Later versions will be static pages 
-with pushed notifications. 
+The page automatically refreshes when new information is detected. Upon this detection the call details are forwarded to an AWS SNS topic that sends text messages.
 
 ![Priority 2](https://github.com/TLMcNulty/CallBoard/raw/master/Pictures/Done%202.png)
