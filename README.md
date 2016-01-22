@@ -3,7 +3,7 @@ CallBoard
 
 An automatic and autonomous 911 page display.
 
-![GOGOGO](https://github.com/TLMcNulty/CallBoard/raw/master/Pictures/Done1.PNG)
+![GOGOGO](https://github.com/pete800/CallBoard/blob/master/Pictures/Current%20View.png)
 
 CallBoard currently recieves text based digital pages from Monroe County 911 ECD. The pages are then dumped to a serial output 
 where a Java App picks them up and formats them before inserting them into a MySQL database. 
