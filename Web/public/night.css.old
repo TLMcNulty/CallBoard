@@ -1,0 +1,158 @@
+html, body
+{
+    	font-family: 'Lato', sans-serif;
+	margin:1em;
+	padding:.5em;
+	padding-top:0;
+	margin-top:.3em;
+	background-color: #808080;
+	color: white;
+}
+
+#wrapper
+{
+	width:100%;
+	border:1px solid white;
+	background-color: #808080;
+	color: white;
+	/*background-color:#ccc;*/
+	overflow: auto;
+}
+
+#priority
+{
+	font-size:24em;
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+	vertical-align: middle;
+	border-bottom:1px solid white;
+	color: white;
+	/*border-top:1px solid white;*/
+	/*line-height: 90px;*/
+	
+}
+
+
+#emd
+{
+	font-size:4em;
+	font-weight:700;
+	/*border:1px solid white;*/
+	/*border-top:1px solid white;*/
+	width:100%;
+	/*float:right;*/
+	/*border-right:0px;*/
+	/*display:inline-block;*/
+	/*float:right;*/
+	text-align:center;
+	/*padding-right:0px;*/
+	/*padding-bottom: .7em;*/
+	/*padding-left: 1em;*/
+	background-color: #808080;
+	color: white;
+}
+
+/*#emdfill
+{
+	border:1px solid purple;
+	float:right;
+	width:100%;
+	background-color:red;
+}*/
+
+#loc
+{
+	font-size: 4em;
+	padding-left: .5em;
+	/*margin-left:auto;*/
+	/*margin-right: auto;*/
+	/*padding-top:.4em;*/
+	/*display:inline;*/
+	line-height: 1.5;
+	/*border: 1px solid red;*/
+	width:53%;
+	float:right;
+	font-weight:900;
+	background-color: #808080;
+	color: white;
+	
+}
+
+#desc
+{
+	font-size:3em;
+	line-height:1.3em;
+	padding: .5em;
+	border-top:1px solid white;
+	background-color: #808080;
+	color: white;
+}
+
+
+#topwrap
+{
+	border-right: 1px solid white;
+	display:inline-block;
+	/*float:right;*/
+	margin-bottom:0px;
+	background-color: #808080;
+	color: white;
+}
+
+#callwrap
+{
+    	/*border: 1px solid white;*/
+	/*border-bottom:1px solid white;*/
+	/*border-top:0px;*/
+	/*border-right:1px solid white;*/
+	display:inline-block;
+	float:left;
+	background-color: #808080;
+	color: white;
+}
+
+/*#timewrap
+{
+	width: inherit;
+    	border: 1px dashed black;
+	display:block;
+}*/
+
+#ctime
+{
+	float:left;
+	font-size:4em;
+	padding:.5em;
+	border-bottom: 1px solid white;
+	/*border-left:none;*/
+	border-right:1px solid white;
+	/*border-top:none;*/
+	/*display:block;*/
+	/*width:4em;*/
+	background-color: #808080;
+	color: white;
+}
+
+#rtime
+{
+	float:right;
+	font-size:4em;
+	padding:.5em;
+	border-bottom: 1px solid white;
+	/*border-right:none;*/
+	/*border-top:none;*/
+	/*display:block;*/
+	background-color: #808080;
+	color: white;
+}
+
+/*#test
+{
+	background-color: white;
+}*/
+
+blink {
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite
+}

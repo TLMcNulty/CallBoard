@@ -1,0 +1,17 @@
+DROP DATABASE jobs;
+CREATE DATABASE jobs;
+USE jobs;
+
+CREATE TABLE calls(
+callnum			INT UNSIGNED NOT NULL AUTO_INCREMENT,
+calldate		DATE,
+calltime		TIME,
+emd			VARCHAR(5),
+priority		VARCHAR(3),
+box			VARCHAR(6),
+loc			VARCHAR(100),
+calldesc		VARCHAR(300),
+misc			VARCHAR(600),
+paged			TINYINT(1) DEFAULT 0,
+CONSTRAINT calls_pk PRIMARY KEY (callnum));
+
