@@ -1,7 +1,7 @@
 ![Callboard+](https://github.com/pete800/CallBoard/blob/master/Pictures/logo.png)
 =========
 
-An automatic and autonomous 911 page display and notification. 
+911 page display and notification. 
 
 ![GOGOGO](https://github.com/pete800/CallBoard/blob/master/Pictures/Current%20View.png)
 
